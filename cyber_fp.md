@@ -6,156 +6,160 @@
 
 ## Abstract
 
-Pinapayagan ng isang computer ng pinagkasunduan para sa computing ng mga nauugnay na mga sagot nang walang anumang mga opinionated na mga tagapamagitan ng blackbox, tulad ng Google, Amazon or Facebook. Stateless, content-addressable peer-to-peer communication networks, such as IPFS, and stateful consensus computers such as Ethereum, can provide just part of the solution needed to obtain akin answers. However, there are at least 3 problems associated with the above-mentioned implementations. (A) the subjective nature of relevance. (B) difficulty in scaling consensus computers for over-sized knowledge graphs. (C) the lack of quality amongst such knowledge graphs. They are prone to various surface attacks, such as sybil attacks, and the selfish behaviour of the interacting agents. In this document, we define a protocol for provable consensus computing of relevance, between IPFS objects, which is based on the Tendermint consensus of cyber\~Rank, which is computed using GPUs in consensus. As proof-of-stake consensus does not help with the initial distribution, we outline the design for ecologic and efficient distribution games. We believe that a minimalistic architecture of the protocol is critical for the formation of a network of domain-specific knowledge consensus computers. As a result of our work, some applications never to have existed before, will emerge. We expand this document with our vision of possible features and potential applications.
+Ang consensus ng computer ay pinapayagang mag-compute ng mga may kaugnayan na mga sagot nang walang mga kuro-kuro na mga tagapamagitan ng blackbox, tulad ng Google, Amazon o Facebook. Ang mga walang saysay, content-addressable peer-to-peer communication networks, tulad ng IPFS, at mga stateful consensus computer tulad ng Ethereum, ay maaaring magbigay ng bahagi lamang ng solusyon na kinakailangan upang makakuha ng mga parehong sagot. Gayunpaman, mayroong hindi bababa sa 3 mga problema na nauugnay sa nabanggit na mga pagpapatupad. (A) ang subjective na katangian ng kaugnayan. (B) kahirapan sa scaling consensus computer para sa over-sized knowledge graphs. (C) ang kakulangan ng kalidad sa mga tulad ng mga knowledge graphs. Sila ay madaling kapitan ng iba't ibang mga surface attacks, tulad ng sybil attacks, at ang makasariling pag-uugali ng mga nakikipag-ugnay na ahente. Sa dokumentong ito, tinukoy namin ang isang protocol para sa mapagkakatiwalaan na pagsasama ng computing na may kaugnayan, sa pagitan ng mga IPFS objects, na batay sa Tendermint na pinagkasunduan ng cyber~Rank, na kinakalkula gamit ang mga GPU sa pag sang-ayon. Bilang patunay na pagsang-ayon ng patakaran ay hindi makakatulong sa paunang pamamahagi, binabalangkas namin ang disenyo para sa mga laro ng ekolohiya at mahusay na pamamahagi. Naniniwala kami na ang isang minimalistic na arkitektura ng protocol ay kritikal para sa pagbuo ng isang network ng domain-specific knowledge consensus computers. Bilang isang resulta ng aming trabaho, ang ilang mga aplikasyon na hindi pa naganap nuon, ay lalabas na. Pinalawak namin ang dokumentong ito sa aming pangitain ng mga posibleng tampok at potensyal na aplikasyon.
 
-## The Great Web
+## Ang Dakilang Web
 
-Original protocols of the Internet, such as: TCP/IP, DNS, URL and HTTP/S have brought the web to a stale point, where it is located as of now. Considering all the benefits that these protocols have produced for the initial development of the web, along with them, they have brought significant obstacles to the table. Globality, being a vital property of the web is under a real threat since its inception. The speed of the connection keeps degrading while the network itself keeps growing due to ubiquitous government interventions. The latter causes privacy concerns as an existential threat to human rights.
+Ang mga orihinal na protocol ng Internet, tulad ng: TCP / IP, DNS, URL at HTTP/S ay nagdala ng web sa isang stale point, kung saan ito matatagpuan hanggang ngayon. Isinasaalang-alang ang lahat ng mga benepisyo na ginawa ng mga protocol na ito para sa paunang pag-unlad ng web, kasama ang mga ito, nagdala sila ng mga makabuluhang obstacles sa talahanayan. Globality, ang pagiging isang vital property ng web ay nasa ilalim ng isang tunay na banta mula nang ito ay umpisahan. Ang bilis ng koneksyon ay nagpapanatili ng panghinaaalsa habang ang network mismo ay patuloy na lumalaki dahil sa maraming mga interbensyon ng gobyerno. Ang huli ay nagdudulot ng mga alalahanin sa privacy bilang isang umiiral na banta sa mga karapatang pantao.
 
-One property not evident in the beginning becomes important with everyday usage of the Internet: the ability to exchange permanent links, thus, they [will not break after time had passed](https://ipfs.io/ipfs/QmNhaUrhM7KcWzFYdBeyskoNyihrpHvUEBQnaddwPZigcN). Reliance on the architecture of one at a time ISP allows governments to effectively censor packets. This is the last drop in the traditional web-stack for every engineer that is concerned about the future of our children.
+Ang isang pag-aari na hindi maliwanag sa simula ay nagiging mahalaga sa pang-araw-araw na paggamit ng Internet: ang kakayahang makipagpalitan ng permanenteng mga link, sa gayon, [hindi sila masisira matapos ang oras na lumipas](https://ipfs.io/ipfs/QmNhaUrhM7KcWzFYdBeyskoNyihrpHvUEBQnaddwPZigcN). Ang pag-asa sa arkitektura nang paisa-isa ay pinapayagan ng ISP ang mga pamahalaan na epektibong magsumite ng mga packet. Ito ang huling pagbagsak sa tradisyonal na web-stack para sa bawat engineer na nababahala tungkol sa hinaharap.
 
-Other properties, while might not be so critical, are very desirable: offline and real-time connection. The average internet user, whilst offline, should still have the ability to carry on working with the state that they already hold. After acquiring a connection they should be able to sync with the global state and to continue to verify the validity of their own state in real-time. Currently, these properties are offered on the application level. We believe that these properties should be integrated into lower-level protocols.
+Ang iba pang mga pag-aari, kahit na hindi gaanong kritikal, ay talagang kanais-nais: offline at real-time connection. Ang average Internet user, habang offline, ay dapat pa ring magkaroon ng kakayahang magpatuloy sa pagtatrabaho sa estado na hawak na nila. Matapos makuha ang isang koneksyon dapat silang mag-sync sa global state at magpatuloy upang mapatunayan ang pagiging totoo ng kanilang sariling estado real-time. Sa kasalukuyan, ang mga pag-aari na ito ay inaalok sa antas ng aplikasyon. Naniniwala kami na ang mga pag-aari na ito ay dapat isama sa mga mas mababang antas ng mga protocol.
 
-The emergence of [a brand-new web-stack](https://ipfs.io/ipfs/Qmf2rKkDPSsvdudwSmdDPbZuYae8XRV26c1wAFCCvg8Dhw) creates an opportunity for a superior Internet. The community calls it web3. We call it the Great Web. We believe that various types of low-level communications should be immutable and should not alter for decades, e.g. immutable content links. They seem very promising at removing the problems of the conventional protocol stack. They add greater speed and provide a more accessible connection to the new web. However, as it happens with any concept that offers something unique - new problems emerge. One such concern is general-purpose search. The existing general-purpose search engines are restrictive and centralized databases that everybody is forced to trust. Those search engines were designed primarily for client-server architectures, based on TCP/IP, DNS, URL and HTTP/S. The Great Web creates a challenge and an opportunity for a search engine that is based on emerging technologies and is designed specifically for these purposes. Surprisingly, permissionless blockchain architecture allows building a general-purpose search engine in a way inaccessible to previous architectures.
+Ang paglitaw ng [isang brand-new web-stack](https://ipfs.io/ipfs/Qmf2rKkDPSsvdudwSmdDPbZuYae8XRV26c1wAFCCvg8Dhw) ay lumilikha ng isang pagkakataon para sa isang mahusay na Internet. Tinatawag ito ng web3 ng mga pamayanan. Tinatawag namin itong the Great Web. Naniniwala kami na ang iba't ibang uri ng mga komunikasyon sa mababang antas ay dapat na hindi mabago at hindi dapat baguhin sa loob ng mga dekada, hal. hindi mababago ang mga link sa nilalaman. Tila nangangako sila sa pag-alis ng mga problemang conventional protocol stack. Nagdaragdag sila ng higit na bilis at nagbibigay ng mas madaling ma-access na koneksyon sa bagong web. Gayunpaman, tulad ng nangyari sa anumang konsepto na nag-aalok ng something unique- lumitaw ang mga bagong problema. Ang isa sa gayong pagkabahala ay ang general-purpose search. Ang existing na general-purpose search engines ay mahigpit at sentralisadong database na ang lahat ay napipilitang magtiwala. Ang mga search engine ay partikular na idinisenyo para sa mga arkitektura ng client-server, batay sa TCP / IP, DNS, URL at HTTP/S. Ang Great Web ay lumilikha ng isang hamon at isang pagkakataon para sa isang search engine na batay sa mga umuusbong na teknolohiya at partikular na idinisenyo para sa mga layuning ito. Ito'y kahanga-hanga, ang walang pahintulot na arkitektura ng blockchain ay nagbibigay-daan sa pagbuo ng general-purpose search engine sa isang paraan na hindi naa-access sa mga nakaraang arkitektura.
 
-## On the adversarial examples problem
 
-[The current architecture of search engines](https://ipfs.io/ipfs/QmeS4LjoL1iMNRGuyYSx78RAtubTT2bioSGnsvoaupcHR6) is a system where some entity processes all the shit. This approach suffers from one challenging and a distinct problem, that has yet to be solved, even by the brilliant Google scientists: [the adversarial examples problem](https://ipfs.io/ipfs/QmNrAFz34SLqkzhSg4wAYYJeokfJU5hBEpkT4hPRi226y9). The problem that Google acknowledges, is that it is rather difficult to algorithmically reason whether or not a particular sample is adversarial. This is inconsiderate to how awesome the educating technology in itself is. A crypto-economical approach can change beneficiaries in the game. Consequently, this approach will effectively remove possible sybil attack vectors. It removes the necessity to hard-code model crawling and meaning extraction by a single entity. Instead, it gives this power to the whole world. A learning sybil-resistant, agent-generated model, will probably lead to orders of magnitude more predictive results.
+## Sa mga Halimbawa ng mga problema ng kalaban
+
+[Ang kasalukuyang arkitektura ng mga search engine](https://ipfs.io/ipfs/QmeS4LjoL1iMNRGuyYSx78RAtubTT2bioSGnsvoaupcHR6) ay isang sistema kung saan ang ilang mga entity ay nagpoproseso ng maling pamamaraan. Ang pamamaraang ito ay naghihirap mula sa isang mapaghamon at isang natatanging problema, na hindi pa malulutas, maging ng mga napakatalino na siyentipiko ng Google: ang mga halimbawa ng panlusob na problema. [the adversarial examples problem](https://ipfs.io/ipfs/QmNrAFz34SLqkzhSg4wAYYJeokfJU5hBEpkT4hPRi226y9). Ang problema na kinikilala ng Google, ay sa halip mahirap na algorithmically dahilan kung o isang partikular na sample ay magkasalungat. Ito ay hindi naaayon sa kung gaano kamangha-mangha ang teknolohiya sa pagtuturo sa sarili nito. Ang isang diskarte sa crypto-economical ay maaaring magbago ng mga benepisyaryo sa laro. Dahil dito, ang pamamaraang ito ay epektibong mag-alis ng mga posibleng mga vektor ng pag-atake ng sybil. Inaalis nito ang pangangailangan sa modelo ng hard-code na pag-crawl at nangangahulugang pagkuha ng isang nilalang. Sa halip, binibigyan nito ang kapangyarihang ito sa buong mundo. Ang isang pag-aaral na lumalaban sa sybil, agent-generated model, ay maaaring humantong sa mga order ng magnitude na higit na mahuhula na mga resulta.
+
 
 ## Cyber protocol
 
-In its core the protocol is very minimalistic and can be expressed with the following steps:
+Sa core nito ang protocol ay napaka minimalistic at maaaring maipahayag gamit ang mga sumusunod na hakbang:
 
-1. Compute the genesis of cyber protocol based on the defined distribution
-2. Define the state of the [knowledge graph](#knowledge-graph)
-3. Gather transactions using a [consensus computer](#the-notion-of-a-consensus-computer)
-4. Check the validity of the signatures
-5. Check the [bandwidth limit](#relevance-machine)
-6. Check the validity of CIDs
-7. If the signatures, the bandwidth limit and CIDs are all valid, apply [cyberlinks](#cyberlinks) and transactions
-8. Calculate the vaules of [cyber\~Rank](#cyberrank) for every round for the CIDs on the [knowledge graph](#knowledge-graph)
+1.Sumite ang genesis ng cyber protocol batay sa tinukoy na pamamahagi.
+2.Tukuyin ang estado ng [knowledge graph](#knowledge-graph)
+3. Magtipon ng mga transaksyon gamit ang [consensus computer] (#the-notion-of-a-consensus-computer)
+4.Suriin ang bisa ng mga lagda
+5.Suriin ang [limitasyon ng bandwidth](#relevance-machine)
+6.Suriin ang bisa ng mga CIDs
+7.Kung ang mga lagda, ang limitasyon ng bandwidth at CIDs ay lahat ng may-bisa, mag-apply ng mga [cyberlink](#cyberlinks) at transaksyon
+8.Kalkulahin ang mga mapagmataas ng [cyber/~Rank](#cyberrank) para sa bawat pag-ikot para sa mga CIDs sa [knowledge graph](#knowledge-graph)
 
-The rest of this document discusses the rationale and the technical details of the proposed protocol.
+Ang natitirang bahagi ng dokumentong ito ay tinatalakay ang makatwiran at ang mga teknikal na detalye ng iminungkahing protocol.
 
 ## Knowledge graph
 
-We represent a knowledge graph as a weighted graph of directed links between content addresses. Aka, content identificators, CIDs, IPFS hashes, or simply - IPFS links. In this document, we will use the above terms as synonyms.
+Kinakatawan namin ang isang knowledge graph bilang isang weighted graph ng mga direktang link sa pagitan ng mga content addresses. Aka, mga pagkakakilanlan ng nilalaman, CID, IPFS hashes, o simpleng - mga link sa IPFS. Sa dokumentong ito, gagamitin namin ang mga term sa itaas bilang mga kasingkahulugan
 
 <p align="center">
   <img src="images/knowledge-graph.png" />
 </p>
 
-Content addresses are essentially web3 links. Instead of using the unclear and mutable:   
+Ang mga content addresses ay mahalagang web3 link. Sa halip na gamitin ang hindi maliwanag at pabago-bago:
 
 `https://github.com/cosmos/cosmos/blob/master/WHITEPAPER.md`
 
-We use the object itself:
+Ginagamit namin ang bagay mismo:
 
 `Qme4z71Zea9xaXScUi6pbsuTKCCNFp5TAv8W5tjdfH7yuH`
 
-By using content addresses to build the knowledge graph we gain [the so much needed](https://steemit.com/web3/@hipster/an-idea-of-decentralized-search-for-web3-ce860d61defe5est) [IPFS](https://ipfs.io/ipfs/QmV9tSDx9UiPeWExXEeH6aoDvmihvx6jD5eLb4jbTaKGps) - [like](https://ipfs.io/ipfs/QmXHGmfo4sjdHVW2MAxczAfs44RCpSeva2an4QvkzqYgfR) superpowers of p2p protocols that are desired for a search engine:
+Sa pamamagitan ng paggamit ng mga content addresses upang mabuo ang knowledge graph nakakakuha kami ng [labis na kinakailangang](https://steemit.com/web3/@hipster/an-idea-of-decentralized-search-for-web3-ce860d61defe5est) [IPFS](https://ipfs.io/ipfs/QmV9tSDx9UiPeWExXEeH6aoDvmihvx6jD5eLb4jbTaKGps) - [tulad](https://ipfs.io/ipfs/QmXHGmfo4sjdHVW2MAxczAfs44RCpSeva2an4QvkzqYgfR) ng mga superpower ng p2p protocol na nais para sa isang search engine:
 
 - mesh-network future-proof
-- interplanetary accessibility
-- censorship resistance
-- technological independence
+- pag-access sa interplanetary
+- paglaban sa censorship
+- teknolohiyang pagsasarili
 
-Our knowledge graph is generated by the awesome masters. Masters add themselves to the knowledge graph with the help of a single transaction, a cyberlink. Thereby, they prove the existence of their private keys for content addresses of their revealed public keys. By using these mechanics, a [consensus computer](#the-notion-of-a-consensus-computer) could achieve provable differentiation between subjects and objects on a knowledge graph.
+Ang aming knowledge graph ay nabuo ng mga kamangha-manghang masters. Idinagdag ng mga masters ang kanilang sarili sa knowledge graph sa tulong ng isang solong transaksyon, isang cyberlink. Sa gayon, napatunayan nila ang pagkakaroon ng kanilang private keys para sa mga content addresses ng kanilang ipinahayag na mga Public keys. Sa pamamagitan ng paggamit ng mga mechanics na ito, ang [consensus computer](#the-notion-of-a-consensus-computer) ay maaaring makamit ang napatunayan na pagkakaiba sa pagitan ng mga paksa at mga bagay sa knowledge graph. 
 
-Our implementation of [go-cyber](https://github.com/cybercongress/go-cyber) is based on [cosmos-SDK](https://github.com/cosmos/cosmos-sdk) identities and [CIDv0/CIDv1](https://github.com/multiformats/cid#cidv0) content addresses.
+Ang aming pagpapatupad ng [go-cyber](https://github.com/cybercongress/go-cyber) ay batay sa mga pagkakakilanlan ng [cosmos-SDK](https://github.com/cosmos/cosmos-sdk) at mga address ng nilalaman ng [CIDv0/CIDv1](https://github.com/multiformats/cid#cidv0 
 
-Masters form the knowledge graph by applying [cyberlinks](#cyberlinks).
+Bumubuo ang mga masters graph ng kaalaman sa pamamagitan ng paglalapat ng mga [cyberlinks](#cyberlinks).
+
 
 ## Cyberlinks
 
-To understand how cyberlinks function we need to understand the difference between a URL link (aka, a hyperlink) and between an IPFS link. A URL link points to the location of the content, whether an IPFS link points to the content itself. The difference between web architectures based on location links and content links is radical and requires a unique approach.
+Upang maunawaan kung paano gumagana ang mga cyberlink kailangan nating maunawaan ang pagkakaiba sa pagitan ng isang link sa URL (aka, isang hyperlink) at sa pagitan ng isang link sa IPFS. Ang isang link sa URL ay tumutukoy sa lokasyon ng nilalaman, maging isang link ng IPFS ang nilalaman mismo. Ang pagkakaiba sa pagitan ng web architectures batay sa mga location links at content links ay radikal at nangangailangan ng isang natatanging diskarte.
 
-Cyberlink is an approach to link two content addresses, or IPFS links, semantically:
+Ang Cyberlink ay isang diskarte upang maiugnay ang dalawang content addresses, o mga link sa IPFS, semantically:
 
 ````bash
 .md syntax: [QmdvsvrVqdkzx8HnowpXGLi88tXZDsoNrGhGvPvHBQB6sH](Qme4z71Zea9xaXScUi6pbsuTKCCNFp5TAv8W5tjdfH7yuH)    
 .dura syntax: QmdvsvrVqdkzx8HnowpXGLi88tXZDsoNrGhGvPvHBQB6sH.Qme4z71Zea9xaXScUi6pbsuTKCCNFp5TAv8W5tjdfH7yuH
 ````
 
-The above cyberlink means that the presentation of [go-cyber](https://github.com/cybercongress/go-cyber) during [cyberc0n](https://etherscan.io/token/0x61B81103e716B611Fff8aF5A5Dc8f37C628efb1E) is referencing to the Cosmos white paper. The concept of cyberlinks is a convention around simple semantics of a communicational format in any p2p network:
+Ang nabanggit sa cyberlink ay nangangahulugan na ang pagtatanghal ng [go-cyber](https://github.com/cybercongress/go-cyber)sa panahon ng [cyberc0n](https://etherscan.io/token/0x61B81103e716B611Fff8aF5A5Dc8f37C628efb1E) ay tumutukoy sa Cosmos white paper. Ang konsepto ng mga cyberlink ay isang kombensyon sa paligid ng mga simpleng semantika ng isang format na pangkomunikasyon sa anumang p2p network:
 
 <p align="center">
   <img src="images/cyberlink.png" />
 </p>
 
-We see that a cyberlink represents a link between the two links. Easy peasy!
+Nakita namin na ang isang cyberlink ay kumakatawan sa isang link sa pagitan ng dalawang link. Napakadali!
 
-Cyberlink is a simple, yet a powerful semantic construction for building a predictive model of the universe. This means that using cyberlinks instead of hyperlinks provides us with the superpowers that were inaccessible to previous architectures of general-purpose search engines.
+Ang Cyberlink ay simple, ngunit napaka-powerful semantic construction para sa pagtatayo ng predictive model ng universe. Nangangahulugan ito na ang paggamit ng mga cyberlink sa halip ng mga hyperlink ay nagbibigay sa amin ng mga superpower na hindi naa-access sa mga nakaraang arkitektura ng mga search engine ng pangkalahatang-layunin.
 
-Cyberlinks can be extended, i.e. they can form linkchains if there two or more cyberlinks subsist from one master, where the second link in the first cyberlink is equal to the first link in the second cyberlink:
+Ang mga Cyberlink ay maaaring mapalawig, maaari silang bumuo ng mga linkchain kung mayroong dalawa o higit pang mga cyberlink subsist mula sa isang master, kung saan ang pangalawang link sa unang cyberlink ay katumbas ng unang link sa ikalawang cyberlink:
 
 <p align="center">
   <img src="images/linkchain.png" />
 </p>
 
-If agents expand native IPFS links with something semantically richer, for example, with [dura](https://github.com/cybercongress/cyb/blob/dev/docs/dura.md) links, then consensus on the execution rules by a specific program can be reached in a more natural approach.
+Kung pinalawak ng mga ahente ang mga native IPFS links na may isang semantically mas mayamang, halimbawa, na may [dura](https://github.com/cybercongress/cyb/blob/dev/docs/dura.md) links, kung gayon ang pagsang-ayon sa mga execution rules sa pamamagitan ng isang tiyak na programa ay maabot sa isang mas natural na pamamaraan.
 
-The [go-cyber](https://github.com/cybercongress/go-cyber) implementation of cyberlinks is available in the [.cyber](https://github.com/cybercongress/dot-cyber) app of our experimental web3 browser [cyb](https://cyb.ai), or at [cyber.page](http://cyber.page).
+Ang [go-cyber](https://github.com/cybercongress/go-cyber) implementation ng mga cyberlink ay available sa [.cyber](https://github.com/cybercongress/dot-cyber) app ng aming eksperimentong web3 browser cyb, at sa [cyber.page](http://cyber.page).
 
-The cyberlinks submitted by masters are stored in a merkle tree according to the [RFC-6962 standard](https://ipfs.io/ipfs/QmZpJLmc3T2L1FLUxzvU3P8MBCPe15fEmUyVS7Bz8ZKMhG). This enables authentification for [proof-of-relevance](#proof-of-relevance).
+Ang mga cyberlink na isinumite ng mga masters ay naka-imbak sa isang merkle tree ayon sa [RFC-6962 standard](https://ipfs.io/ipfs/QmZpJLmc3T2L1FLUxzvU3P8MBCPe15fEmUyVS7Bz8ZKMhG). Pinapayagan nito ang pagpapatunay para sa [proof-of-relevance](#proof-of-relevance).
 
 <p align="center">
   <img src="images/graph-tree.png" />
 </p>
 
-Using cyberlinks, we can compute the relevance of subjects and objects on the [knowledge graph](#knowledge-graph). But we need a [consensus computer](#the-notion-of-a-consensus-computer).
+Gamit ang mga cyberlink, maaari nating kalkulahin ang kaugnayan ng mga paksa at mga bagay sa [knowledge graph](#knowledge-graph). Ngunit kailangan namin ng isang  [consensus computer](#the-notion-of-a-consensus-computer).
 
-## The notion of a consensus computer
+## Ang paniwala ng isang computer na pinagkasunduan
 
-A consensus computer is an abstract computing machine that emerges from the interaction between agents. A consensus computer has capacity in terms of fundamental computing resources: memory and computation. To interact with agents a computer needs bandwidth. An ideal consensus computer is a computer where:
+Ang isang consensus computer ay isang abstract na computing machine na lumitaw mula sa pakikipag-ugnayan sa pagitan ng mga ahente. Ang isang consensus computer ay may kakayahan sa mga tuntunin ng mga fundamental computing resources: memorya at pagkalkula. Upang makipag-ugnay sa mga ahente ang isang computer ay nangangailangan ng bandwidth. Ang isang perpektong consensus computer ay isang computer kung saan:
 
 `the sum of all the computations and memory available to individuals`     
 `is equal to`    
 `the sum of all the verified computations and memory of the consensus computer`    
 
 
-We know that:
+Alam natin na:
 
 `verifications of computations < (computations + verifications of computations)`    
 
-Hence, we will never be able to achieve an ideal consensus computer. The CAP theorem and the scalability trilemma append more proof to this statement.
+Samakatuwid, hindi namin makamit ang isang perpektong consensus computer. Ang CAP theorem at ang scalability trilemma ay nagdaragdag ng higit na katibayan sa pahayag na ito.
 
 <p align="center">
   <img src="images/consensus-computer.png" />
 </p>
 
-Yet this theory can work as a performance indicator for a consensus computer. After 6 years of investing into consensus computers, we have come to realize that the [Tendermint](https://ipfs.io/ipfs/QmaMtD7xDgghqgjN62zWZ5TBGFiEjGQtuZBjJ9sMh816KJ) consensus has a good enough balance between the coolness required for our task and the readiness for its production. Therefore, we have decided to implement the [cyber](#cyber-protocol) protocol using the Tendermint consensus, which has very close settings to the Cosmos Hub. The [go-cyber](https://github.com/cybercongress/go-cyber) implementation is a 64-bit Tendermint consensus computer of relevance for 64-byte string-space. This is by far not ideal, at least as 1/146, because we have 146 validators who verify the same computations producing the [knowledge-graph](#knowledge-graph).
+Ngunit ang teoryang ito ay maaaring gumana bilang isang tagapagpahiwatig ng pagganap para sa isang consensus computer. Matapos ang 6 na taon ng pamumuhunan sa consensus computer, natanto namin na ang pinagkasunduan ng  [Tendermint](https://ipfs.io/ipfs/QmaMtD7xDgghqgjN62zWZ5TBGFiEjGQtuZBjJ9sMh816KJ) ay may sapat na balanse sa pagitan na kinakailangan para sa aming gawain at kahandaan para sa paggawa nito. Samakatuwid, nagpasya kaming ipatupad ang [cyber](#cyber-protocol) gamit ang Tendermint consensus, na kung saan ay may napakalapit na mga setting sa Cosmos Hub. Ang pagpapatupad ng [go-cyber](https://github.com/cybercongress/go-cyber) ay isang 64-bit Tendermint consensus computer ng kaugnayan para sa 64-byte string-space. Hindi ito perpekto, hindi bababa sa 1/146, dahil mayroon kaming 146 na validator na nagpapatunay sa parehong mga pagkalkula na gumagawa ng [knowledge-graph](#knowledge-graph).
 
-We must bind the computation, storage and the bandwidth supply of the consensus computer to a maximized demand for queries. Computation and storage, in case of a basic [relevance machine](#relevance-machine) can be easily predicted based on bandwidth. But bandwidth requires a limiting mechanism.
+Dapat nating tiyakin ang pagkalkula, pag-iimbak at ang supply ng bandwidth ng consensus computer sa isang na-maximize na demand para sa mga query. Ang pagkalkula at pag-iimbak, kung sakaling ang isang basic [relevance machine](#relevance-machine) ay madaling mahulaan batay sa bandwidth. Ngunit ang bandwidth ay nangangailangan ng isang limiting mechanism.
 
 ## Relevance machine
 
-We define a relevance machine as a machine that transitions the state of a [knowledge-graph](#knowledge-graph) based on the will of the agents wishing to teach and to study that [knowledge-graph](#knowledge-graph). The will is projected by every [cyberlinks](#cyberlinks) a master does. The more agents inquire the [knowledge-graph](#knowledge-graph), the more valuable the knowledge becomes. Based on these projections, relevance between content addresses can be computed. The relevance machine enables a simple construction for the search mechanism via querying and delivering answers.
+Tinukoy namin ang relevance machine bilang isang makina na naglilipat ng estado ng isang [knowledge-graph](#knowledge-graph) batay sa kalooban ng mga ahente na nais magturo at pag-aralan ang [knowledge-graph](#knowledge-graph) na ito. Ang kalooban ay inaasahan ng bawat [cyberlinks](#cyberlinks) na ginagawa ng isang master. Kung mas maraming pang mga ahente ang nagtatanong sa [knowledge-graph](#knowledge-graph), mas nagiging higit ang kanilang kaalaman. Batay sa mga proyektong ito, ang pagkakaugnay sa pagitan ng content address ay maaaring makalkula. Ang relevance machine ay nagbibigay-daan sa isang simpleng konstruksyon para sa search mechanism sa pamamagitan ng pag-query at paghahatid ng mga sagot.
 
-One property of the relevance machine is crucial. It must have inductive reasoning properties or follow the blackbox principle:
+Ang isang pag-aari ng relevance machine ay mahalaga. Dapat itong magkaroon ng mga induktibong katangian ng pangangatuwiran o sundin ang prinsipyo ng blackbox:
 
 `The machine should be able to interfere with predictions without any knowledge about the objects,`   
 `except for who, when and what was cyberlinked`   
 
-If we assume that a [consensus computer](#the-notion-of-a-consensus-computer) must have some information about the linked objects, then the complexity of such a model will grow unpredictably. Therefore the high requirements of the processing computer for memory and computation. Thanks to content addressing a relevance machine which follows the blackbox principle, does not need to store data. But, can still effectively operate on top of it. The deduction of meaning inside a [consensus computer](#the-notion-of-a-consensus-computer) is expensive. Hence, such a design can depend on assumption blindness. Instead of deducting the meaning inside of the [consensus computer](#the-notion-of-a-consensus-computer), we have designed a system in which meaning extraction is incentivized. This is achieved due to masters requiring [CYB](#cyb) tokens to express their will, based on which, the relevance machine can compute rank.
+Kung ia-assume natin na ang [consensus computer](#the-notion-of-a-consensus-computer) ay dapat magkaroon ng ilang impormasyon tungkol sa mga linked objects, kung gayon ang pagiging kumplikado ng naturang modelo ay lalago nang hindi nahuhulaan. Samakatuwid ang mataas na mga kinakailangan ng computer sa pagproseso para sa memorya at pagkalkula. Salamat sa nilalaman ng pagtugon sa isang relevance machine na sumusunod sa prinsipyo ng blackbox, ay hindi kailangang mag-imbak ng data. Ngunit, maaari pa ring epektibong gumana sa tuktok nito. Ang pagbawas ng kahulugan sa loob ng [consensus computer](#the-notion-of-a-consensus-computer ay mahal. Samakatuwid, ang gayong disenyo ay maaaring depende sa assumption blindness. Sa halip na ibawas ang kahulugan sa loob ng [consensus computer](#the-notion-of-a-consensus-computer), nag-disenyo kami ng isang sistema kung saan ang kahulugan ng pagkuha ay hindi na-insentibo. Nakamit ito dahil sa mga masters na nangangailangan ng mga token ng [CYB](#cyb) upang ipahayag ang kanilang kalooban, batay sa kung saan, maaaring makalkula ang ranggo ng kaugnayan. 
 
-In the center of the spam protection system is an assumption that write operations can be executed only by those, who have a vested interest in the evolutionary success of the relevance machine. Every 1% of effective stake within the [consensus computer](#the-notion-of-a-consensus-computer) gives the ability to use 1% of the possible networks' bandwidth and its computing capabilities. A simple rule prevents abuse from the agents: a pair of content identificators may be cyberlinked by an address only once.
+Sa gitna ng sistema ng proteksyon ng spam ay isang palagay na ang mga operasyon ng pagsulat ay maaaring isakatuparan lamang ng mga mayroong isang vested na interes sa ebolusyon ng tagumpay ng relevance machine. Bawat 1% ng epektibong stake sa loob ng [consensus computer](#the-notion-of-a-consensus-computer) ay nagbibigay ng kakayahang magamit ang 1% ng mga bandwidth ng mga posibleng network at ang computing capabilities nito. Ang isang simpleng patakaran ay pumipigil sa pang-aabuso sa mga ahente: isang pares ng mga pagkakakilanlan ng nilalaman ay maaaring mai-cyberlink ng isang beses sa isang address.
 
 <p align="center">
   <img src="images/algo1.png" />
 </p>
 
-There are only two ways to change the effective stake (active stake + bonded stake) of an account: direct token transfers and bonding operations.
+Mayroong dalawang mga paraan lamang upang mabago ang epektibong stake (active stake + bonded stake) ng isang account: direct token transfers at bonding operations.
 
-[Cyber](#cyber-protocol) uses a very simple bandwidth model. The principal goal of this model is to reduce the daily network growth to a given constant. This is done to accommodate heroes (validators) with the ability to forecast any future investment into infrastructure. Thus, here we introduce 'watts' or 'W'. Each message type has an assigned W cost. The constant 'DesirableBandwidth', determines the desirable 'RecoveryWindow' spent by the W value. The recovery period defines how fast a master can recover their bandwidth from 0 back to max bandwidth. A master has maximum W proportional to his effective stake, determined by the following formula:
+Gumagamit ang [Cyber](#cyber-protocol) ng isang napaka-simpleng modelo ng bandwidth. Ang pangunahing layunin ng modelong ito ay upang mabawasan ang pang-araw-araw na paglaki ng network sa naibigay palagi. Ginagawa ito upang mapaunlakan ang mga bayani (validators) na may kakayahang mag-forecast ng anumang pamumuhunan sa hinaharap sa imprastraktura. Kaya, narito ipinakilala namin ang 'watts' o 'W'. Ang bawat uri ng mensahe ay may itinalagang W cost. Ang palagiang 'DesirableBandwidth', ay tumutukoy sa kanais-nais na 'RecoveryWindow' na ginugol ng halaga ng W. Tinukoy ng recovery period kung gaano kabilis ang mababawi ng isang master ang kanilang bandwidth mula 0 pabalik sa max bandwidth. Ang isang master ay may pinakamataas na proporsyonal na W sa kanyang mabisang stake, na tinutukoy ng sumusunod na pormula:
 
 `AgentMaxW = EffectiveStake * DesirableBandwidth`
 
-The period 'AdjustPricePeriod' sums up how much W was spent during the period 'RecoveryPeriod' in the latest block. 'SpentBandwidth' / 'DesirableBandwidths' ratio is called the fractional reserve ratio. When network usage is low, the fractional reserve ratio adjusts the message cost to allow masters with a lower stake to commit more transactions. When the demand for resources increases, the fractional reserve ratio goes > 1, consequently, increasing message cost and limiting final tx count for a long-term period (W recovery will be < then W spending). As no one uses all of their possessed bandwidth, we can safely use up to 100x fractional reserves within a price recalculation target period. Such mechanics provide a discount for creating [cyberlinking](#cyberlinks), thus, effectively maximizing demand for it. You can see that the proposed design needs demand for full bandwidth for the relevance to become valuable.
+Ang panahong 'AdjustPricePeriod' ay nagbubuo ng kung magkano ang ginugol sa W sa panahon ng 'RecoveryPeriod' sa pinakabagong block. Ang 'SpentBandwidth' / 'DesirableBandwidths' ratio ay tinatawag na fractional reserve ratio. Kapag ang network usage ay mababa, ang fractional reserve ratio ay nag-aayos ng gastos sa mensahe upang payagan ang mga masters na may mas mababang stake upang gumawa ng mas maraming mga transaksyon. Kapag ang demand para sa mga mapagkukunan ay nagdaragdag, ang fractional reserve ratio ay napupunta> 1, dahil dito, ang pagtaas ng gastos ng mensahe at paglilimita ng huling tx count para sa isang pangmatagalang panahon (ang pagbawi ng W ay <pagkatapos W paggastos). Dahil walang gumagamit ng lahat ng kanilang pagmamay-ari ng bandwidth, ito'y ligtas at maaaring gumamit ng hanggang sa 100x na fractional na reserba sa loob ng panahon ng target na recalculation target. Ang ganitong mga mechanics ay nagbibigay ng discount para sa paglikha ng [cyberlinking](#cyberlinks), sa gayon, epektibong na-maximize ang demand para dito. Maaari mong makita na ang iminungkahing disenyo ay nangangailangan ng demand para sa buong bandwidth para sa kaugnayan upang maging mahalaga.
 
-Human intelligence is organized in such a manner that none-relevant and none-important memories are forgotten over time. The same can be applied to the relevance machine. The relevance machine can implement [aggressive pruning strategies](https://ipfs.io/ipfs/QmP81EcuNDZHQutvdcDjbQEqiTYUzU315aYaTyrVj6gtJb), such as, the pruning of the history of the formation of the [knowledge-graph](#knowledge-graph), or forgetting links that become less relevant.
+Ang katalinuhan ng tao ay isinaayos sa isang paraan na walang nauugnay at walang-mahalagang mga alaala na nakalimutan sa paglipas ng panahon. Parehong maaaring mailapat sa relevance machine. Ang relevance machine ay maaaring magpatupad ng mga [aggressive pruning strategies](https://ipfs.io/ipfs/QmP81EcuNDZHQutvdcDjbQEqiTYUzU315aYaTyrVj6gtJb) tulad ng, ang pruning ng kasaysayan ng pagbuo ng [knowledge-graph](#knowledge-graph), o pagkalimot ng mga link na hindi gaanong nauugnay.
 
-As a result, the implemented cybernomics of [CYB](#cyb) tokens serves not just as will-expression and spam-protection mechanisms, but also, functions as an economics regulation tool that can align the processing capacity of heroes and the market demand for processing. The go-cyber implementation of the relevance machine is based on a very straightforward mechanism, called: cyber\~Rank.
+Bilang resulta, ang ipinatupad na cybernomics ng mga token ng [CYB](#cyb) ay nagsisilbi hindi lamang bilang mga mekanismo ng proteksyon ng pagpapahayag at proteksyon ng spam, kundi pati na rin, gumana bilang isang tool sa regulasyon sa ekonomiya na maaaring ihanay ang kapasidad sa pagproseso ng mga bayani at ang demand sa merkado para sa pagproseso. Ang go-cyber na pagpapatupad ng relevance machine ay batay sa isang straightforward mechanism, na tinatawag na: cyber~ Rank.
+
 
 ## cyber\~Rank
 
