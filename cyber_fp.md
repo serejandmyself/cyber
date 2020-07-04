@@ -250,27 +250,27 @@ Sa panahon ng pagpapatupad ng iminungkahing arkitektura, natanto namin ng hindi 
 
 Dahil sa mga limitasyong teknikal, kailangan nating i-bootstrap ang ekosistema gamit ang 2 token: [THC](#thc) at [CYB](#cyb)
 
-- Ang [CYB](#cyb) ay ang katutubong tanda ng soberanong [cyber](#cyber-protocol) na pinalakas ng algorithm ng pinagkasunduang Tendermint. Ito ay may 3 pangunahing paggamit: (1) staking para sa consensus, (2) bandwidth na naglilimita sa pagsusumite ng mga [cyberlinks](#cyberlinks), at (3) pagpapahayag ng kalooban ng mga masters para sa pagkalkula ng cyber~rank.
+- Ang [CYB](#cyb) ay ang katutubong tanda ng soberanong [cyber](#cyber-protocol) na pinalakas ng algorithm ng pinagkasunduang Tendermint. Ito ay may 3 pangunahing paggamit: (1) staking para sa consensus, (2) bandwidth na naglilimita sa pagsusumite ng mga [cyberlinks](#cyberlinks), at (3) pagpapahayag ng kalooban ng mga masters para sa pagkalkula ng cyber rank.
 
-- Ang [THC](#thc) (pagbigkas bilang tech) ay isang malikhaing cyber proto substance. Ang [THC](#thc) bilang isang Ethereum ERC-20 compatible token na mayroong halaga ng utility sa anyo ng kontrol sa cyber~Foundation (ang pamayanan na namamahala sa DAO) at ang ETH mula sa distribution game. Ang [THC](#thc) ay pinalabas sa paglikha ng cyber~Foundation bilang isang samahan ng Aragon. Ang mga malikhaing kapangyarihan ng THC ay nagmula sa kakayahang makatanggap ng 1 CYB token bawat 1 [THC](#thc) token kapag na-vested bago matapos ang cyber~Auction.
+- Ang [THC](#thc) (pagbigkas bilang tech) ay isang malikhaing cyber proto substance. Ang [THC](#thc) bilang isang Ethereum ERC-20 compatible token na mayroong halaga ng utility sa anyo ng kontrol sa cyber Foundation (ang pamayanan na namamahala sa DAO) at ang ETH mula sa distribution game. Ang [THC](#thc) ay pinalabas sa paglikha ng cyber Foundation bilang isang samahan ng Aragon. Ang mga malikhaing kapangyarihan ng THC ay nagmula sa kakayahang makatanggap ng 1 CYB token bawat 1 [THC](#thc) token kapag na-vested bago matapos ang cyber Auction.
 
 Ang parehong mga token ay mananatiling gumagana at susubaybayan nang nakapag-iisa ang halaga ng isa't isa dahil sa kanilang kakaibang utility sa pamamagitan ng likas na katangian.
 
 Sa pangkalahatan, ang deployment process ay may sumusunod na istraktura:
 
-1.Ang cyber~Congress ang nagtataglay ng Game of Links
+1.Ang cyber Congress ang nagtataglay ng Game of Links
 2.Ang pamayanan ay nakikilahok sa Game of Links
 3. Ang pamayanan ay nagpapatunay at nagmumungkahi ng isang bloke ng Genesis na may mga resulta mula sa Game of Links
-4.Ang cyber~Congress ay nagdedeploy ng mga kontrata para sa cyber~Foundation at cyber~Auction
-5.Ang pamayanan ay lumahok sa cyber~Auction pagkatapos ng Genesis. Ang mga donors stake [THC](#thc) token upang makakuha ng mga token ng [CYB](#cyb)
-6.Ang cyber~Congress ay patuloy na namamahagi ng mga token ng CYB sa panahon ng cyber~Auction
-7. Sinusunog ng cyber~Congress ang natitirang mga token ng [CYB](#cyb) at [THC](#thc) token at ito'y ibabalita sa pagtatapos ng paunang proseso ng pamamahagi
+4.Ang cyber Congress ay nagdedeploy ng mga kontrata para sa cyber Foundation at cyber Auction
+5.Ang pamayanan ay lumahok sa cyber Auction pagkatapos ng Genesis. Ang mga donors stake [THC](#thc) token upang makakuha ng mga token ng [CYB](#cyb)
+6.Ang cyber Congress ay patuloy na namamahagi ng mga token ng CYB sa panahon ng cyber Auction
+7. Sinusunog ng cyber Congress ang natitirang mga token ng [CYB](#cyb) at [THC](#thc) token at ito'y ibabalita sa pagtatapos ng paunang proseso ng pamamahagi
 
-Nabubuhay ang cyber~Congress sa Ethereum bilang isang [Aragon DAO](https://mainnet.aragon.org/#/cybercongress/0x4feb2bcc5907e7779130c093eef8fb44502c1330). Nagpapatakbo din ito ng [2-of-3 multisig in Cyber network](https://cyber.page/network/cyber/contract/cyber1latzme6xf6s8tsrymuu6laf2ks2humqvdq39v8. Binuo ng cyber~Congress  ang cyber protocol. Sa loob ng konteksto ng [cyber](#cyber-protocol), ang Congress ay may 2 tungkulin:
+Nabubuhay ang cyber Congress sa Ethereum bilang isang [Aragon DAO](https://mainnet.aragon.org/#/cybercongress/0x4feb2bcc5907e7779130c093eef8fb44502c1330). Nagpapatakbo din ito ng [2-of-3 multisig in Cyber network](https://cyber.page/network/cyber/contract/cyber1latzme6xf6s8tsrymuu6laf2ks2humqvdq39v8. Binuo ng cyber Congress  ang cyber protocol. Sa loob ng konteksto ng [cyber](#cyber-protocol), ang Congress ay may 2 tungkulin:
 
-1. Upang mag-deploy at magsagawa ng paunang programa sa pamamahagi, na imposible maging awtomatiko. Dahil walang mapagkakatiwalaang imprastraktura para sa pagpapalit ng mensahe sa pagitan ng ETH at ATOM, ipinakilala ng cyber~Congress ang isang punto ng pagkabigo sa paunang proseso ng pamamahagi. Napagpasyahan naming ipadala ang mga token ng [CYB](#cyb) sa mga staker ng [THC](#thc) dahil sa palagay namin na ngayon ang tamang oras upang ilunsad ang network na nilikha namin. Naniniwala rin kami na ang ongoing na auction ay mahalaga para sa paunang proseso ng pamamahagi. Kung ang cyber~Congress ay hindi naghahatid ng mga obligasyon nito sa mga tuntunin ng pamamahagi dahil sa anumang posibleng mga kadahilanan, inaasahan namin na ang komunidad ay makakakuha ng network at ipamahagi ang mga token ng CYB tulad ng ipinangako. Inaasahan, ang bawat operasyon ay dinisenyo nang matibay at hayag. Ang lahat ng mga operasyon ay isasagawa gamit ang isang espesyal na [layunin 2-of-3 multisig account sa Cyber network](https://cyber.page/network/cyber/contract/cyber147drnke9676972jr3anklkj7pzgwjw47cp2u7j).
+1. Upang mag-deploy at magsagawa ng paunang programa sa pamamahagi, na imposible maging awtomatiko. Dahil walang mapagkakatiwalaang imprastraktura para sa pagpapalit ng mensahe sa pagitan ng ETH at ATOM, ipinakilala ng cyber Congress ang isang punto ng pagkabigo sa paunang proseso ng pamamahagi. Napagpasyahan naming ipadala ang mga token ng [CYB](#cyb) sa mga staker ng [THC](#thc) dahil sa palagay namin na ngayon ang tamang oras upang ilunsad ang network na nilikha namin. Naniniwala rin kami na ang ongoing na auction ay mahalaga para sa paunang proseso ng pamamahagi. Kung ang cyber Congress ay hindi naghahatid ng mga obligasyon nito sa mga tuntunin ng pamamahagi dahil sa anumang posibleng mga kadahilanan, inaasahan namin na ang komunidad ay makakakuha ng network at ipamahagi ang mga token ng CYB tulad ng ipinangako. Inaasahan, ang bawat operasyon ay dinisenyo nang matibay at hayag. Ang lahat ng mga operasyon ay isasagawa gamit ang isang espesyal na [layunin 2-of-3 multisig account sa Cyber network](https://cyber.page/network/cyber/contract/cyber147drnke9676972jr3anklkj7pzgwjw47cp2u7j).
 
-2. Suportahan ang paglaki ng [cyber](#cyber-protocol) protocol hanggang sa ang pamayanan ang pumalit  pagbuo sa anyo ng cyber ~ Foundation. Ang mga donasyon sa mga ATOM sa panahon ng Game of Link ay ibinahagi sa cyber ~ [cyber\~Congress Cosmos 2-of-3 multisig](https://www.mintscan.io/account/cosmos1latzme6xf6s8tsrymuu6laf2ks2humqv2tkd9a). Ang lahat ng mga donasyong ATOM na naka-ruta sa cyber~Congress multisig ay magiging pag-aari nito. Ang papel ng donasyon ng ATOM ay ang sumusunod: salamat sa ATOM nais naming ma-secure ang isang pangako para sa cyber ~ Congress sa pagbuo ng parehong Cosmos at Cyber   ecosystem. Pinahihintulutan ng mga donasyon ng ATOM ang cyber~Congress na gumamit ng mga gantimpala ng staking at maabot ang isang napapanatiling daloy, para sa patuloy na pagpopondo ng cyber protocol nang walang pangangailangan na ibagsak ang mga token ng [CYB](#cyb) o ATOM.
+2. Suportahan ang paglaki ng [cyber](#cyber-protocol) protocol hanggang sa ang pamayanan ang pumalit  pagbuo sa anyo ng cyber ~ Foundation. Ang mga donasyon sa mga ATOM sa panahon ng Game of Link ay ibinahagi sa cyber ~ [cyber\~Congress Cosmos 2-of-3 multisig](https://www.mintscan.io/account/cosmos1latzme6xf6s8tsrymuu6laf2ks2humqv2tkd9a). Ang lahat ng mga donasyong ATOM na naka-ruta sa cyber Congress multisig ay magiging pag-aari nito. Ang papel ng donasyon ng ATOM ay ang sumusunod: salamat sa ATOM nais naming ma-secure ang isang pangako para sa cyber Congress sa pagbuo ng parehong Cosmos at Cyber ecosystem. Pinahihintulutan ng mga donasyon ng ATOM ang cyber Congress na gumamit ng mga gantimpala ng staking at maabot ang isang napapanatiling daloy, para sa patuloy na pagpopondo ng cyber protocol nang walang pangangailangan na ibagsak ang mga token ng [CYB](#cyb) o ATOM.
 
 ## CYB
 
@@ -278,7 +278,7 @@ Ang mga sistema ng proof-of-stake ay hindi makakatulong sa paunang pamamahagi. N
 
 Ang genesis block ng cyber protocol ay naglalaman ng 1 000 000 000 000 000 CYB (isang petacyb o 1 PCYB) na mga token na pinaghiwa-hiwalay katulad ng sumusunod:
 
-- 750 000 000 000 000 CYB tokens para sa mga nagtutuon ng [THC](#thc) tokens hanggang sa katapusan ng cyber~Auction (mga kalahok ng cyber~Congress, Game of Thrones sa ETH at cyber~Auction)
+- 750 000 000 000 000 CYB tokens para sa mga nagtutuon ng [THC](#thc) tokens hanggang sa katapusan ng cyber Auction (mga kalahok ng cyber Congress, Game of Thrones sa ETH at cyber Auction)
 - 150 000 000 000 000 CYB token para sa mga kalahok ng Game of Links
 - 100 000 000 000 000 CYB token bilang isang regalo para sa mga pamayanan ng Ethereum, Cosmos at Urbit
 
@@ -292,11 +292,11 @@ Sa kasalukuyan ay walang ganoong bagay tulad ng isang maximum amount ng mga toke
 
 ## THC
 
-Ang layunin ng paglikha ng isang kahalili sa isang istraktura na tulad ng [Google-like](https://google.com) ay nangangailangan ng pambihirang pagsisikap mula sa iba't ibang mga grupo. Samakatuwid, nagpasya kaming mag-set up ng cyber~Foundation bilang pondo, na pinamamahalaan sa pamamagitan ng isang desentralisadong engine tulad ng isang Aragon DAO. Sinisingil ito sa ETH at pinamamahalaan ng mga ahente na lumahok sa paunang pamamahagi. Ang pamamaraang ito ay magpapahintulot sa pangangalaga mula sa labis na paglalaglag ng merkado ng token ng katutubong platform - [CYB](#cyb) sa loob ng mga unang taon ng kanyang trabaho, at sa gayon, tinitiyak ang matatag na pag-unlad. Bilang karagdagan, pinapayagan nitong pag-iba-ibahin ang batayan ng platform at pahabain ang protocol sa iba pang mga consensus computing architectures, nararapat na lumitaw ang ganitong pangangailangan.
+Ang layunin ng paglikha ng isang kahalili sa isang istraktura na tulad ng [Google-like](https://google.com) ay nangangailangan ng pambihirang pagsisikap mula sa iba't ibang mga grupo. Samakatuwid, nagpasya kaming mag-set up ng cyber Foundation bilang pondo, na pinamamahalaan sa pamamagitan ng isang desentralisadong engine tulad ng isang Aragon DAO. Sinisingil ito sa ETH at pinamamahalaan ng mga ahente na lumahok sa paunang pamamahagi. Ang pamamaraang ito ay magpapahintulot sa pangangalaga mula sa labis na paglalaglag ng merkado ng token ng katutubong platform - [CYB](#cyb) sa loob ng mga unang taon ng kanyang trabaho, at sa gayon, tinitiyak ang matatag na pag-unlad. Bilang karagdagan, pinapayagan nitong pag-iba-ibahin ang batayan ng platform at pahabain ang protocol sa iba pang mga consensus computing architectures, nararapat na lumitaw ang ganitong pangangailangan.
 
 Habang pinipili ang token para sa mga donasyon, susundin natin ang tatlong pangunahing pamantayan: ang token ay dapat na (1) isa sa pinaka likido, (2) pinakapangako, kaya ang isang pamayanan ay makakatipid ng isang solidong investment bag upang maging mapagkumpitensya kahit na kung ihahambing sa naturang mga higante tulad ng [Google](https://google.com), at (3) may kakayahang teknikal na magsagawa ng auction at isang nagreresultang organisasyon, nang hindi umaasa sa anumang ikatlong partido. Ang nag-iisang sistema na tumutugma sa mga pamantayang ito ay ang Ethereum, samakatuwid, ang pangunahing token ng mga donasyon ay ETH.
 
-Bago ang Genesis cyber~Foundation ay nai-minted ang 750 000 000 000 000 THC (pitong daang limampu't terathc) na pinaghiwa-hiwalay katuad ng sumusunod:
+Bago ang Genesis cyberFoundation ay nai-minted ang 750 000 000 000 000 THC (pitong daang limampu't terathc) na pinaghiwa-hiwalay katuad ng sumusunod:
 
 - 600 000 000 000 000 THC tokens are allocated to the cyber\~Auction contract
 - 150 000 000 000 000 THC tokens are allocated to the cyber\~Congress contract
@@ -305,7 +305,7 @@ Bago ang Genesis cyber~Foundation ay nai-minted ang 750 000 000 000 000 THC (pit
   <img src="images/THC.svg" />
 </p>
 
-Ang lahat ng mga desisyon ng cyber~Foundation ay isasagawa batay sa mga resulta ng mga boto sa THC. Ang mga sumusunod na mga parameter ay ilalapat:
+Ang lahat ng mga desisyon ng cyber Foundation ay isasagawa batay sa mga resulta ng mga boto sa THC. Ang mga sumusunod na mga parameter ay ilalapat:
 
 - Support: 51\%
 - Quorum: 51\%
@@ -336,16 +336,16 @@ Ang pangunahing ideya ay: ang mas mahusay na pag-ikot ng Takeoff donation round,
 
 ## Cyber\~Auction
 
-Isang laro para sa Ethereum hodler sa ETH. Ang mga kalahok ay nagbibigay ng ETH kapalit ng THC. Ang mas maraming ETH ay naibigay, mas mataas ang presyo ng THC. Ang laro ay nagsisimula mula sa presyo na kung saan ay 5x closing price ng Takeoff sa ETH. Ang laro ay natapos kapag ang alinman sa 888 days ay lumipas mula nang umpisa o kung ang presyo ay tumaas ng 5x mula sa panimulang presyo. Sa panahong ito ang mga token ng CYB ay patuloy na ipinamamahagi ng cyber~Congress, batay sa mga vested na token ng THC hanggang sa katapusan ng auction. Nagbibigay ang mga pinalalakas na token ng [THC](#thc) ng kakayahang makatanggap ng mga token ng [CYB](#cyb), at mga kapangyarihan sa pagboto sa loob ng cyber~Foundation. Ang presyo ng [THC](#thc) sa panahon ng Cyber  ~Auction ay tinukoy ng mga sumusunod na function:
+Isang laro para sa Ethereum hodler sa ETH. Ang mga kalahok ay nagbibigay ng ETH kapalit ng THC. Ang mas maraming ETH ay naibigay, mas mataas ang presyo ng THC. Ang laro ay nagsisimula mula sa presyo na kung saan ay 5x closing price ng Takeoff sa ETH. Ang laro ay natapos kapag ang alinman sa 888 days ay lumipas mula nang umpisa o kung ang presyo ay tumaas ng 5x mula sa panimulang presyo. Sa panahong ito ang mga token ng CYB ay patuloy na ipinamamahagi ng cyber Congress, batay sa mga vested na token ng THC hanggang sa katapusan ng auction. Nagbibigay ang mga pinalalakas na token ng [THC](#thc) ng kakayahang makatanggap ng mga token ng [CYB](#cyb), at mga kapangyarihan sa pagboto sa loob ng cyber Foundation. Ang presyo ng [THC](#thc) sa panahon ng Cyber  ~Auction ay tinukoy ng mga sumusunod na function:
 
 g(t)= 1/30 * t * p + 5 * p
 
 kung saan ang g (t) ay presyo ng TTHC sa ETH, t ay halaga ng mga token ng TTHC noong cyber ~ Auction, p ang nagreresultang presyo ng Takeoff para sa isang CYB na na-convert sa ETH sa pagsasara ng sandali.
 
-Ang panimulang presyo ay idinisenyo upang bigyan ang mga kalahok ng Takeoff ng 5x premium para sa kanilang panganib na mamuhunan sa mga imprastraktura ng hardware at software bago ang Genesis. Nagbibigay ang cyber~Auction ng mga makabuluhang insentibo para sa mga unang kalahok. Matapos ang pagtatapos ng pamamahagi, mai-unlock ng mga kalahok ang kanilang mga token ng [THC](#thc) at gamitin ang mga ito ayon sa nais nila, e.i. transfer, exchange, atbp. Bilang isang resulta ng auction, ang komunidad ay magkakaroon ng access sa lahat ng naibigay na ETH sa loob ng samahan ng Aragon. Matapos ang pagtatapos ng cyber~Auction, ang lahat ng natitirang [THC](#thc) sa cyber~Auction contract ay dapat na masunog. Ang mga sumusunod na patakaran ay nalalapat sa mga token ng CYB sa ilalim ng [multisig](https://cyber.page/network/cyber/contract/cyber147drnke9676972jr3anklkj7pzgwjw47cp2u7j): para sa pamamahagi:
+Ang panimulang presyo ay idinisenyo upang bigyan ang mga kalahok ng Takeoff ng 5x premium para sa kanilang panganib na mamuhunan sa mga imprastraktura ng hardware at software bago ang Genesis. Nagbibigay ang cyber Auction ng mga makabuluhang insentibo para sa mga unang kalahok. Matapos ang pagtatapos ng pamamahagi, mai-unlock ng mga kalahok ang kanilang mga token ng [THC](#thc) at gamitin ang mga ito ayon sa nais nila, e.i. transfer, exchange, atbp. Bilang isang resulta ng auction, ang komunidad ay magkakaroon ng access sa lahat ng naibigay na ETH sa loob ng samahan ng Aragon. Matapos ang pagtatapos ng cyber Auction, ang lahat ng natitirang [THC](#thc) sa cyber Auction contract ay dapat na masunog. Ang mga sumusunod na patakaran ay nalalapat sa mga token ng CYB sa ilalim ng [multisig](https://cyber.page/network/cyber/contract/cyber147drnke9676972jr3anklkj7pzgwjw47cp2u7j): para sa pamamahagi:
 
-- Ang cyber~Congress ay hindi iginawad ang stake, at bilang isang resulta, mananatili itong isang passive stake hanggang sa maipamahagi ito
-- Pagkatapos ng cyber~Auction, ang lahat ng natitirang mga token ng [CYB](#cyb) ay dapat na masunog 
+- Ang cyber Congress ay hindi iginawad ang stake, at bilang isang resulta, mananatili itong isang passive stake hanggang sa maipamahagi ito
+- Pagkatapos ng cyber Auction, ang lahat ng natitirang mga token ng [CYB](#cyb) ay dapat na masunog 
 
 ## Apps
 
